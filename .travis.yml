@@ -12,6 +12,9 @@ jobs:
     language: java
     jdk: oraclejdk8
     install: skip
+	before_install:
+	- ls -la
+    - chmod +x /.gradlew 
     script: ./gradlew clean build
     before_deploy:
     - git config --local user.name "gayathrin"
